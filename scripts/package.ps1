@@ -66,10 +66,6 @@ if ($LASTEXITCODE -ne 0) { throw 'GUI build failed' }
 go build -trimpath -ldflags='-s -w -H=windowsgui' -o (Join-Path $win 'Uninstall.exe') ./cmd/uninstall
 if ($LASTEXITCODE -ne 0) { throw 'Uninstaller build failed' }
 $userReadme = (Get-Content -LiteralPath 'packaging/README.txt' -Raw).Replace("`r`n","`n")
-if ($OfficialRepository) {
-  $userReadme = $userReadme.Replace('当前本地准备版本'+"`n"+'尚未配置官方更新仓库，会显示“更新源尚未启用”。正式启用后，后台仅',
-    '官方更新仓库为 '+$OfficialRepository+'。后台仅')
-}
 [IO.File]::WriteAllText((Join-Path $win 'README.txt'),$userReadme,[Text.UTF8Encoding]::new($false))
 foreach ($file in @('LICENSE','THIRD_PARTY_NOTICES.md','RELEASE_NOTES.md')) { Copy-Item -LiteralPath $file -Destination (Join-Path $win $file) }
 $manifest = [ordered]@{version=$version;os='windows';arch='amd64';librarySchema=1;executableSHA256=(Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $win 'PromptDock.exe')).Hash.ToLowerInvariant()}

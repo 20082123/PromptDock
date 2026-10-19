@@ -8,13 +8,11 @@
 
 支持 Windows 10／11 x64，解压后运行 `PromptDock.exe`，不需要 Python、.NET、账号或模型 API。请下载 Windows ZIP；GitHub 的 Source code 是给开发者的源码。
 
-![PromptDock 真实浮窗](assets/popup.png)
+![PromptDock 操作演示：复制后粘贴、点击插入、回车插入](assets/demo.gif)
 
-![PromptDock 真实管理窗口](assets/manager.png)
+约 24 秒循环演示，可直接在本页观看：**复制后粘贴 → 点击插入 → 回车插入**。包含局部放大与按键提示。
 
-[观看三种操作演示（约 24 秒，DeepSeek 输入框）](https://github.com/20082123/PromptDock/releases/download/v0.2.0/PromptDock-demo.mp4)
-
-截图和录屏使用隔离示例库。演示保留复制后粘贴、点击插入和回车插入三种真实操作，未发送消息。画面经过裁剪和局部放大，按键提示按用户确认的操作后期添加。[录制说明](DEMO_RECORDING.md)
+录屏使用隔离示例库，未发送消息；按键提示按用户确认的操作后期添加。[高清 MP4（可选）](https://github.com/20082123/PromptDock/releases/download/v0.2.0/PromptDock-demo.mp4) · [录制说明](DEMO_RECORDING.md)
 
 ## 开始使用
 

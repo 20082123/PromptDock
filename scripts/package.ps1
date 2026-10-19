@@ -52,6 +52,7 @@ $sourceFiles = @(
   '.github/workflows/check.yml','.github/workflows/release.yml'
 )
 if (Test-Path -LiteralPath 'assets/demo.mp4') { $sourceFiles += 'assets/demo.mp4' }
+if (Test-Path -LiteralPath 'assets/demo.gif') { $sourceFiles += 'assets/demo.gif' }
 New-Item -ItemType Directory -Path $win,$src -Force | Out-Null
 foreach ($file in $sourceFiles) {
   if (-not (Test-Path -LiteralPath $file -PathType Leaf)) { throw "Missing public file: $file" }

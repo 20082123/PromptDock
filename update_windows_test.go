@@ -174,7 +174,12 @@ func TestChangedDataOrBackupFailureStopsUpgrade(t *testing.T) {
 	}
 }
 func TestUninstallOnlyRemovesKnownProgramFiles(t *testing.T) {
-	dir := t.TempDir()
+	// Hosted Windows runners can place TEMP under a directory junction.
+	// Exercise deletion in its real directory without weakening production checks.
+	dir, err := filepath.EvalSymlinks(t.TempDir())
+	if err != nil {
+		t.Fatal(err)
+	}
 	for _, name := range append(append([]string{}, windowsPackageFiles...), "library.json", "my-notes.txt") {
 		os.WriteFile(filepath.Join(dir, name), []byte(name), 0600)
 	}

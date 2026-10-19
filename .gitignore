@@ -1,0 +1,19 @@
+# Local builds and release-preparation output
+/.build/
+/release/
+/PromptDock.exe
+/PromptDock.exe~
+*.exe
+*.tmp
+*.broken-*.json
+.promptdock-install.lock
+.promptdock-update.json
+.promptdock-update-*/
+
+# Local application data if a test or portable run writes into the checkout
+/library.json
+/PromptDock/
+
+# Private curation, candidate texts, source archives and historical reviews.
+# They are intentionally absent from the public repository and source bundle.
+/docs/

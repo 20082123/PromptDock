@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-04T00:00:00+08:00",
+  "tasks": [
+    {
+      "id": "ai-dialogue",
+      "title": "与 AI 沟通"
+    },
+    {
+      "id": "writing-expression",
+      "title": "写作与表达"
+    },
+    {
+      "id": "learning-understanding",
+      "title": "学习与理解"
+    },
+    {
+      "id": "analysis-decisions",
+      "title": "分析与决策"
+    },
+    {
+      "id": "reading-organizing",
+      "title": "阅读与整理"
+    },
+    {
+      "id": "work-life-communication",
+      "title": "工作与生活沟通"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "collection-01-03",
+      "title": "聊了这么多，到底确定了什么",
+      "description": "长对话经过多次纠正，想整理结论，或交接给另一个对话继续。",
+      "body": "请整理我们到目前为止的对话，帮助我看清已经确定了什么。直接使用当前对话，不重新开始一轮提问。\n\n先处理前后变化：我后来的明确纠正应覆盖较早的误解。你提出但我没有确认的建议，不要写成我的要求；我说“可以考虑”也不等于已经决定。\n\n请分别整理：\n1. 已确认：我明确表达或确认的目标、约束、偏好与决定。\n2. 待确认：你的推测、备选建议，以及仍缺依据的判断。\n3. 已排除：我明确否决或纠正的方向，以及对话中出现过的理由。\n4. 下一步：根据已确认内容可以继续做的事；需要决定的地方单独标明。\n\n重要结论附一句简短的对话依据，无法定位就注明，不编造引述。互相冲突且尚未解决的信息保留为分歧，不替我选择。\n\n最后写一段可交给另一个对话的简短背景：真实目标、当前进度、明确约束和下一步。只包含足以继续工作的内容，不复述全部聊天，也不加入新方案。",
+      "primaryTaskId": "ai-dialogue",
+      "tags": [
+        "对话整理",
+        "需求确认",
+        "交接"
+      ],
+      "origin": "bundled",
+      "source": {
+        "kind": "adaptation-zh",
+        "author": "liulifeng8918",
+        "license": "MIT",
+        "url": "https://github.com/liulifeng8918/socratic-dialogue-skill/blob/8af0892fd9055d117d49fb0e4146f196ba528113/skills/socratic-dialogue/SKILL.md",
+        "licenseUrl": "https://github.com/liulifeng8918/socratic-dialogue-skill/blob/8af0892fd9055d117d49fb0e4146f196ba528113/LICENSE",
+        "notice": "MIT License\n\nCopyright (c) 2026 liulifeng8918\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+        "adaptation": "中文整理版（非逐字翻译），2026-10-03。从技能说明提取为独立聊天正文；增加前后纠正、否决方向和交接摘要的处理。",
+        "checkedAt": "2026-10-03"
+      },
+      "contentVersion": 1,
+      "status": "collected",
+      "favorite": false,
+      "useCount": 0,
+      "localModified": false,
+      "deleted": false
+    },
+    {
+      "id": "collection-01-04",
+      "title": "教到我能自己用出来",
+      "description": "看过解释觉得懂了，换题或实际应用时仍不会。",
+      "body": "请辅导我理解要学习的知识点，目标是让我能自己解释并在新情境中使用。\n\n先利用我已提供的信息判断学习目的和基础。缺少时，一次只问一个问题，了解我想学什么、打算用来做什么，以及已经会什么；已有答案不要重复问。\n\n开始讲解后，每次处理一个适合我水平的小部分，配一个具体例子，再让我解释其中的关系或尝试应用。根据我的回答调整下一步，不预先倾倒整套课程。\n\n如果我答错或卡住，先定位误解，给一个足够推进的小提示；必要时换例子或补讲前置知识。不要连续追问却不给支持。\n\n不要用“听懂了吗”作为掌握的证据。请让我用自己的话说明原理，或在一个不同于示例的新问题中使用它。根据实际回答指出已掌握和仍混淆的部分。\n\n练习达到本次目标后，简短总结关键联系与一个容易出错的地方。如果我要求直接讲解、看答案或结束练习，请照做。\n\n若我还没给出知识点，先问我想学什么。",
+      "primaryTaskId": "learning-understanding",
+      "tags": [
+        "概念理解",
+        "应用",
+        "互动学习"
+      ],
+      "origin": "bundled",
+      "source": {
+        "kind": "adaptation-zh",
+        "author": "Lilach Mollick、Ethan Mollick",
+        "license": "CC BY 4.0",
+        "url": "https://www.moreusefulthings.com/student-exercises",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "notice": "Prompts on this page (but no other content on the site) are licensed under Creative Commons License  Attribution 4.0 International  This license requires that reusers give credit to the creators (Lilach Mollick and Ethan Mollick). It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. Use prompts at your own risk, outputs may not be correct.\n\n中文改编：PromptDock，2026-10-03；同样按 CC BY 4.0 提供。改编不代表原作者认可本项目。",
+        "adaptation": "中文整理版（非逐字翻译），2026-10-03。原文标题：Updated Tutoring Prompt。中文压缩改编，去掉角色开场和重复问话；补充用户可要求直接讲解或停止练习。",
+        "checkedAt": "2026-10-03"
+      },
+      "contentVersion": 1,
+      "status": "collected",
+      "favorite": false,
+      "useCount": 0,
+      "localModified": false,
+      "deleted": false
+    },
+    {
+      "id": "collection-01-05",
+      "title": "我来讲，你来找理解漏洞",
+      "description": "准备考试、分享或讲解，希望发现自己说不清的地方。",
+      "body": "我要用教别人的方式检查自己的理解。请扮演一位对这个主题几乎没有基础、但会认真追问的初学者。\n\n先让我说明要讲什么，然后听我讲。每次只问一个能暴露理解缺口的问题：某个术语是什么意思、这个结论为什么成立、能否举一个具体例子、换一种情况是否仍然成立。\n\n根据我刚才的解释继续追问，不照着固定题库走。不要替我补全论证，也不要因为我说了一些术语就表示已经理解。遇到跳步、循环解释或例子对不上结论时，明确说出你卡在何处。\n\n进行约 5 轮问答，或在我要求结束时，退出初学者角色。根据对话指出：我讲清楚了什么、哪里只是在复述定义、哪个联系还缺解释。每处问题引用或概括我的具体表述。\n\n最后给我一个最值得补学的问题。如果我明确要求暂停角色扮演并请你讲解，再转为讲解。",
+      "primaryTaskId": "learning-understanding",
+      "tags": [
+        "讲解练习",
+        "理解检查",
+        "知识盲点"
+      ],
+      "origin": "bundled",
+      "source": {
+        "kind": "adaptation-zh",
+        "author": "Lilach Mollick、Ethan Mollick",
+        "license": "CC BY 4.0",
+        "url": "https://www.moreusefulthings.com/student-exercises",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "notice": "Prompts on this page (but no other content on the site) are licensed under Creative Commons License  Attribution 4.0 International  This license requires that reusers give credit to the creators (Lilach Mollick and Ethan Mollick). It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. Use prompts at your own risk, outputs may not be correct.\n\n中文改编：PromptDock，2026-10-03；同样按 CC BY 4.0 提供。改编不代表原作者认可本项目。",
+        "adaptation": "中文整理版（非逐字翻译），2026-10-03。原文标题：Updated Teach the AI as student。固定采用好奇初学者角色；保留短轮次练习，增加具体薄弱点反馈和用户主动暂停后的讲解。",
+        "checkedAt": "2026-10-03"
+      },
+      "contentVersion": 1,
+      "status": "collected",
+      "favorite": false,
+      "useCount": 0,
+      "localModified": false,
+      "deleted": false
+    },
+    {
+      "id": "collection-01-06",
+      "title": "按实际目标点评我的作品",
+      "description": "文章、汇报、作品或方案已有初稿，希望获得有依据的修改意见。",
+      "body": "请作为一位严格、具体的编辑或评审，点评我提供的作品。\n\n先确认这份作品要给谁看、希望达到什么结果，以及有没有明确的要求或评价标准。优先读取已有背景；缺少会影响评价的信息时，一次只问一个最重要的问题。如果没有现成标准，提出少量与你理解的用途相关的标准，请我确认后再评。\n\n评价时，把意见对应到具体句段、结构或内容。区分“没有达到目标”“事实或论证存在问题”和“个人风格选择”，不要把你的审美当成唯一标准。\n\n先指出真正有效、修改时应保留的部分，再挑出最值得改的三处。每处说明：问题在哪里、为什么影响目标、我可以怎样改。没有三处实质问题就少列，不凑数。\n\n暂时不要重写整篇。必要时用一个短例子说明修改方向，但不要增加未经提供的事实。\n\n最后问我准备先改哪一处。若我提供修改稿，对照原来的问题和评价标准检查改进，不随意换一套要求。",
+      "primaryTaskId": "writing-expression",
+      "tags": [
+        "作品点评",
+        "评价标准",
+        "反馈"
+      ],
+      "origin": "bundled",
+      "source": {
+        "kind": "adaptation-zh",
+        "author": "Lilach Mollick、Ethan Mollick",
+        "license": "CC BY 4.0",
+        "url": "https://www.moreusefulthings.com/student-exercises",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "notice": "Prompts on this page (but no other content on the site) are licensed under Creative Commons License  Attribution 4.0 International  This license requires that reusers give credit to the creators (Lilach Mollick and Ethan Mollick). It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. Use prompts at your own risk, outputs may not be correct.\n\n中文改编：PromptDock，2026-10-03；同样按 CC BY 4.0 提供。改编不代表原作者认可本项目。",
+        "adaptation": "中文整理版（非逐字翻译），2026-10-03。原文标题：AI Mentor Gives Feedback。从教学作业扩展到日常作品；保留目标与标准先行，加入修改优先级和版本比较。默认点评，不代写整篇。",
+        "checkedAt": "2026-10-03"
+      },
+      "contentVersion": 1,
+      "status": "collected",
+      "favorite": false,
+      "useCount": 0,
+      "localModified": false,
+      "deleted": false
+    },
+    {
+      "id": "collection-01-07",
+      "title": "重要协商，先练一遍",
+      "description": "准备协商工作安排、交付范围或资源分配，需要提前练习应对。",
+      "body": "请陪我演练一场即将发生的协商。先从我提供的背景了解：对方是谁、我要争取什么、哪些条件不能接受，以及谈不成时我有哪些选择。缺少重要信息时，一次只问一个问题；已有内容不要重复问。\n\n信息足够后，用几句话确认演练情境。你补充的设定要标为练习假设，不当作现实中对方的真实想法。\n\n进入演练后，你扮演对方，我扮演自己。每次只给对方的一次回应，等我接话；不要同时代写双方对话。根据对方的合理顾虑作出回应，适度提出异议，不轻易答应，也不故意刁难。\n\n约 6 轮后推动我们作出一个实际选择：达成条件、暂缓或结束协商。我说“暂停”时，立即退出角色，帮我分析卡住的地方。\n\n演练结束后，结合我的原话反馈：哪句话帮助了沟通、哪句话模糊了目标或过早让步、哪些对方顾虑没有得到回应。选最值得改的一次回应，给一个更清楚且符合我边界的表达示例。\n\n最后整理我在真实谈话前还需要确认的信息。不要把模拟结果当作现实结果的预测。",
+      "primaryTaskId": "work-life-communication",
+      "tags": [
+        "协商演练",
+        "范围沟通",
+        "表达边界"
+      ],
+      "origin": "bundled",
+      "source": {
+        "kind": "adaptation-zh",
+        "author": "Lilach Mollick、Ethan Mollick",
+        "license": "CC BY 4.0",
+        "url": "https://www.moreusefulthings.com/student-exercises",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "notice": "Prompts on this page (but no other content on the site) are licensed under Creative Commons License  Attribution 4.0 International  This license requires that reusers give credit to the creators (Lilach Mollick and Ethan Mollick). It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes. Use prompts at your own risk, outputs may not be correct.\n\n中文改编：PromptDock，2026-10-03；同样按 CC BY 4.0 提供。改编不代表原作者认可本项目。",
+        "adaptation": "中文整理版（非逐字翻译），2026-10-03。原文标题：Negotiation Simulator - GPT4, Claude 3, Gemini 1.5。以用户真实情境为入口，去掉幻想场景选择和场景布置长文；保留约六轮演练，补充不臆测现实对方心理。",
+        "checkedAt": "2026-10-03"
+      },
+      "contentVersion": 1,
+      "status": "collected",
+      "favorite": false,
+      "useCount": 0,
+      "localModified": false,
+      "deleted": false
+    },
+    {
+      "id": "collection-01-08",
+      "title": "从长文里留下值得记住的东西",
+      "description": "阅读长文、访谈或讲座记录，想保留有依据的观点和可用内容。",
+      "body": "请阅读我提供的文章、访谈记录或文件，整理其中值得记住的内容。\n\n先用一小段话说明材料在讨论什么，以及作者最想表达的结论。随后按需要整理以下内容：\n\n1. 值得保留的观点：选择有解释力、出人意料或能改变实际做法的观点；写清作者的理由，附页码、标题或可定位的短片段。\n2. 可以推导的启发：允许连接材料中的多个观点，但明确标为你的归纳，说明依据，不伪装成作者原话。\n3. 值得摘录的原话：仅选择少量确有保留价值的短句，准确引用并标明说话者或位置；没有合适内容就略过。\n4. 能尝试的行动：区分作者明确建议的做法和你提出的应用，说明适用条件。\n5. 值得继续查的来源：整理材料提到的书、研究、工具等；信息不完整就如实保留，不补造链接或出处。\n\n材料里有几条有价值的内容就保留几条，不凑数量，不在不同部分重复同一个观点。原文中的数据和事实主张若未经核实，写成“材料称”，不要替它背书。\n\n最后用一句话概括最值得带走的东西。若附件无法读取或内容不完整，先说明可处理的范围。",
+      "primaryTaskId": "reading-organizing",
+      "tags": [
+        "文章",
+        "访谈",
+        "资料提炼"
+      ],
+      "origin": "bundled",
+      "source": {
+        "kind": "adaptation-zh",
+        "author": "Daniel Miessler / Fabric（具体文件贡献者未单独核实）",
+        "license": "MIT",
+        "url": "https://github.com/danielmiessler/Fabric/blob/ddf1aab968caa9adf90137a6536c768d02b237d6/data/patterns/extract_wisdom/system.md",
+        "licenseUrl": "https://github.com/danielmiessler/Fabric/blob/ddf1aab968caa9adf90137a6536c768d02b237d6/LICENSE",
+        "notice": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+        "adaptation": "中文整理版（非逐字翻译），2026-10-03。去掉最低条数、固定词数和主题偏好；增加原文定位及“原文声称不等于事实核实”。",
+        "checkedAt": "2026-10-03"
+      },
+      "contentVersion": 1,
+      "status": "collected",
+      "favorite": false,
+      "useCount": 0,
+      "localModified": false,
+      "deleted": false
+    },
+    {
+      "id": "collection-01-09",
+      "title": "这段话的结论，证据撑得住吗",
+      "description": "读到一个很有说服力的观点，想检查其证据和推理。",
+      "body": "请检查我提供的这段话或材料，判断它的结论是否得到足够支持。\n\n先用一两句话复述作者的主张，再拆出真正影响结论的几项内容，区分：可核实的事实主张、价值判断，以及从事实推出的结论。\n\n对每个重要主张，检查材料提供了什么证据、证据实际支持到哪一步、结论是否超出了证据范围。注意相关性与因果关系、样本与整体、个例与普遍规律之间是否被混用。\n\n指出结论依赖的关键假设；若有合理反例或其他解释，说明它们怎样影响结论。不要为了“平衡”而硬找同样多的正反意见，也不要先认定作者一定有逻辑错误。\n\n如果需要外部核实且你能检索，引用实际查到的来源，并区分支持、反驳和仍不足以判断的证据。如果无法检索或没有找到依据，标为待核实，不编造文献、数据或链接。\n\n最后说明：哪些部分目前站得住，哪些只能有条件成立，以及哪一项新证据最可能改变判断。不要用一个总分代替这些解释。",
+      "primaryTaskId": "analysis-decisions",
+      "tags": [
+        "观点",
+        "证据",
+        "论证检查"
+      ],
+      "origin": "bundled",
+      "source": {
+        "kind": "adaptation-zh",
+        "author": "Daniel Miessler / Fabric（具体文件贡献者未单独核实）",
+        "license": "MIT",
+        "url": "https://github.com/danielmiessler/Fabric/blob/ddf1aab968caa9adf90137a6536c768d02b237d6/data/patterns/analyze_claims/system.md",
+        "licenseUrl": "https://github.com/danielmiessler/Fabric/blob/ddf1aab968caa9adf90137a6536c768d02b237d6/LICENSE",
+        "notice": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+        "adaptation": "中文整理版（非逐字翻译），2026-10-03。保留主张与证据分析；去掉政治标签、强制正反配对和等级总分，补充无法核实的处理方式。",
+        "checkedAt": "2026-10-03"
+      },
+      "contentVersion": 1,
+      "status": "collected",
+      "favorite": false,
+      "useCount": 0,
+      "localModified": false,
+      "deleted": false
+    },
+    {
+      "id": "collection-01-10",
+      "title": "把一个想法向四个方向展开",
+      "description": "有一个想法，但思考总停留在同一条路上，希望探索关联和后果。",
+      "body": "请围绕我提出的想法或问题，帮助我把思路展开。\n\n先用简洁的话明确这个想法在说什么，列出已有依据和仍是假设的部分。若最基本的意思有歧义，先问一个澄清问题；不要擅自换成一个更大的议题。\n\n然后沿四个方向探索：\n1. 相似：其他场景或领域有没有类似做法？说明相似发生在哪里，又有哪些差异，避免只列名词。\n2. 相反：什么观点或做法会与它竞争？这些替代方案在什么条件下更合适？\n3. 上游：是什么更基础的问题、需求或前提，使这个想法有意义？\n4. 下游：如果采用它，可能带来哪些直接结果，以及容易忽略的后续影响？\n\n每个方向只保留最有解释力的联系，并说明联系如何成立。例子、历史来源或研究没有把握时标明，不补造权威出处。\n\n最后指出最值得继续探索的一条联系，以及一个能推进判断的小问题。不要在依据不足时直接宣布这个想法好或不好。",
+      "primaryTaskId": "analysis-decisions",
+      "tags": [
+        "想法展开",
+        "关联",
+        "替代思路"
+      ],
+      "origin": "bundled",
+      "source": {
+        "kind": "adaptation-zh",
+        "author": "Daniel Miessler / Fabric（具体文件贡献者未单独核实）",
+        "license": "MIT",
+        "url": "https://github.com/danielmiessler/Fabric/blob/ddf1aab968caa9adf90137a6536c768d02b237d6/data/patterns/create_idea_compass/system.md",
+        "licenseUrl": "https://github.com/danielmiessler/Fabric/blob/ddf1aab968caa9adf90137a6536c768d02b237d6/LICENSE",
+        "notice": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+        "adaptation": "中文整理版（非逐字翻译），2026-10-03。保留四方向方法，去掉笔记软件字段和英文模板；补充关联解释和证据边界。",
+        "checkedAt": "2026-10-03"
+      },
+      "contentVersion": 1,
+      "status": "collected",
+      "favorite": false,
+      "useCount": 0,
+      "localModified": false,
+      "deleted": false
+    }
+  ]
+}
